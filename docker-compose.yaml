@@ -1,0 +1,45 @@
+version: '4.22'
+
+services: 
+  mongodb:
+    image: mongo:6.0.9-jammy
+    ports:
+      - '27017:27017'
+    volumes:
+      - dbdata:/data/db 
+    networks:
+      - node-network
+
+  backend:
+    build: ./cynsheet-backend-v1
+    container_name: backend_c
+    ports:
+      - '8080:8080'
+    depends_on:
+      - mongodb
+    volumes:
+      - ./cynsheet-backend-v1:/app
+    networks:
+      - node-network
+
+  cynsheetclient:
+    build: ./cynsheet-client-v1
+    container_name: frontend_c
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongodb
+      - backend
+    volumes:
+      - ./cynsheet-client-v1:/app
+    networks:
+      - node-network
+    stdin_open: true
+    tty: true
+
+volumes:
+  dbdata:
+
+networks:
+  node-network:
+    driver: bridge

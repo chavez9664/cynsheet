@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Lora";
+  }
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #f1356d;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #e2df18;
+}
+
+.content {
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.createCharacter h2 {
+  font-size: 30px;
+  color: #2d1fac;
+  
+}
+
+.form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+textarea,
+select,
+input,
+label {
+  text-align: center;
+  margin: 5px;
+  font-size: 16px;
+}

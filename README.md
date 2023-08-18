@@ -16,6 +16,6 @@ with the other two services.
 
 ## Instructions
 * Install Docker
-* Open a terminal in the root folder; enter and run docker-compose up in the terminal.
+* Open a terminal in the root folder; enter and run 'docker-compose up' in the terminal.
 * Use Docker to open the browser or navigate to localhost:3000 on a browser after containers are running.
 * Application does not initialize with any characters, they will begin to appear on the roster/main menu as they are created.
